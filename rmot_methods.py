@@ -10,8 +10,8 @@ import numpy as np
 import torch
 import time
 
-from kernels import kernel
-from utils import distance, kshape, lse__
+from rmot_kernels import kernel
+from rmot_utils import distance, kshape, lse__
 
 
 ######## MAIN ALGORITHMS

@@ -15,18 +15,18 @@ import matplotlib.pylab as plt
 import time
 #import random
 
-from kernels import kernel, cost_tensor
+from rmot_kernels import kernel, cost_tensor
 
 
 def benchmark(dataset, dual = False):
     if dual:
-        from methods import sinkhorn_uniform_dual as sinkhorn_uniform
-        from methods import sinkhorn_dual as sinkhorn
-        from methods import batchGreenkhorn_uniform_dual as batchGreenkhorn_uniform
-        from methods import batchGreenkhorn_dual as batchGreenkhorn
+        from rmot_methods import sinkhorn_uniform_dual as sinkhorn_uniform
+        from rmot_methods import sinkhorn_dual as sinkhorn
+        from rmot_methods import batchGreenkhorn_uniform_dual as batchGreenkhorn_uniform
+        from rmot_methods import batchGreenkhorn_dual as batchGreenkhorn
     else:
-        from methods import sinkhorn, sinkhorn_uniform 
-        from methods import batchGreenkhorn, batchGreenkhorn_uniform
+        from rmot_methods import sinkhorn, sinkhorn_uniform 
+        from rmot_methods import batchGreenkhorn, batchGreenkhorn_uniform
                 
     params = dataset['params']
     data = dataset['data']
@@ -97,7 +97,7 @@ def benchmark(dataset, dual = False):
 
 def benchmark_multi(dataset):
 
-    from methods import multiCyclicSinkhorn, multiSinkhorn, multiBatchGreenkhorn
+    from rmot_methods import multiCyclicSinkhorn, multiSinkhorn, multiBatchGreenkhorn
     
     params = dataset['params']
     data = dataset['data']
@@ -179,7 +179,7 @@ def benchmark_multi(dataset):
 
 def benchmark_multi_2(dataset):
 
-    from methods import multiCyclicSinkhorn, multiSinkhorn, multiBatchGreenkhorn
+    from rmot_methods import multiCyclicSinkhorn, multiSinkhorn, multiBatchGreenkhorn
     
     params = dataset['params']
     data = dataset['data']

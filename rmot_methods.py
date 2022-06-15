@@ -17,7 +17,7 @@ from rmot_utils import distance, kshape, lse__
 ######## MAIN ALGORITHMS
      
 def sinkhorn_dual(a, x, b, y, reg, K, metric = "kl", numItermax=10000, stopThr=1e-6, verbose=False,
-               log=False, dist_log = False, gpu = True, dtype = "float64", q = 0.25):
+               log=False, dist_log = False, gpu = True, dtype = "float64", q = 0.75):
     r"""
 
     ----------
@@ -260,7 +260,7 @@ def sinkhorn(a, x, b, y, reg, K, metric = "kl", numItermax=10000, stopThr=1e-6, 
       return [u*a,v*b]
 
 def batchGreenkhorn_dual(a, x, b, y, reg, K, batch = 0.25, metric = "kl", numItermax=1000, stopThr=1e-6, verbose=False,
-               log=False, dist_log = False, gpu = True, dtype = "float64", q = 0.25):
+               log=False, dist_log = False, gpu = True, dtype = "float64", q = 0.75):
     r"""
 
     References
@@ -577,7 +577,7 @@ def batchGreenkhorn(a, x, b, y, reg, K,  batch = 0.25, metric = "kl", stab = Fal
   
 
 def sinkhorn_uniform_dual(x, y, reg, K, metric = "kl", numItermax=100, stopThr=1e-6, verbose=False,
-               log=False, dist_log = False, gpu = True, dtype = "float64", q = 0.5):
+               log=False, dist_log = False, gpu = True, dtype = "float64", q = 0.75):
     r"""
 
     References
@@ -979,7 +979,7 @@ def sinkhorn_uniform(x, y, reg, K, metric = "kl", numItermax=10000, stopThr=1e-6
       return [u/m,v/n]
   
 def batchGreenkhorn_uniform_dual(x, y, reg, K, batch = 0.25, metric = "kl", numItermax=100, stopThr=1e-6, verbose=False,
-               log=False, dist_log = False, gpu = True, dtype = "float64", q = 0.5):
+               log=False, dist_log = False, gpu = True, dtype = "float64", q = 0.75):
     r"""
 
     References

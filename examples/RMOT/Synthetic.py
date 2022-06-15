@@ -6,7 +6,7 @@ Created on Thu Dec 30 11:18:58 2021
 @author: vkiit
 """
 
-from benchmarks import benchmark_multi_2, my_plot_2
+from rmot_benchmarks import benchmark_multi_2, my_plot_2
 import torch
 import numpy as np
 

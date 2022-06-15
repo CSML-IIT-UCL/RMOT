@@ -6,8 +6,8 @@ Created on Thu Dec 30 11:18:58 2021
 @author: vkiit
 """
 
-from benchmarks import benchmark, benchmark_multi 
-from utils import my_plot
+from rmot_benchmarks import benchmark, benchmark_multi 
+from rmot_utils import my_plot
 import torch
 import numpy as np
 

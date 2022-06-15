@@ -6,7 +6,7 @@ Created on Thu Dec 30 11:18:58 2021
 @author: vkiit
 """ 
 
-from benchmarks import benchmark, my_plot
+from rmot_benchmarks import benchmark, my_plot
 
 import torch
 import numpy as np
@@ -19,7 +19,7 @@ if ~('ModelNet' in globals()):
     ModelNetData = ModelNet('ModelNetData/', name='10', train = False)    
 
 dataset = dict()
-dataset['name'] = 'ModelNet3D_final2_scale'
+dataset['name'] = 'ModelNet10'
 dataset['type'] = 'point clouds'
 
 pairs = 3

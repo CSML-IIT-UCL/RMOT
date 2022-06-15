@@ -6,6 +6,9 @@ Created on Thu Dec 30 11:18:58 2021
 @author: vkiit
 """ 
 
+import sys
+sys.path.append("../../")
+
 from rmot_benchmarks import benchmark, my_plot, summary
 
 import torch
